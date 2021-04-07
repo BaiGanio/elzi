@@ -6,7 +6,8 @@ name: CI/CD
 on:
   # Triggers the workflow on push or pull request events but only for the matser branch
   push:
-    branches: [ matser ]
+    branches:
+    - matser
   pull_request:
     branches: [ matser ]
   workflow_dispatch:
