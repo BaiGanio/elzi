@@ -16,7 +16,7 @@ export class BlogEditorComponent implements OnInit {
   public Editor =  ClassicEditor;  
   ckeConfig: any;  
   postData = new Post();  
-  formTitle = 'Add';  
+  formTitle = 'Нова статия';  
   postId = '';
 
   constructor(

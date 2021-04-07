@@ -1,11 +1,11 @@
-<mat-toolbar class="nav-bar mat-elevation-z2">
+<!-- <mat-toolbar class="nav-bar mat-elevation-z2">
     <button mat-button [routerLink]='["/"]'> My blog </button>
     <ng-container>
       <button mat-button [routerLinkActive]='["link-active"]' [routerLink]='["/addpost"]'>
         Add Post
       </button>
     </ng-container>
-    <!-- <span class="spacer"></span>
+    <span class="spacer"></span>
     <button mat-button><a href="https://github.com/AnkitSharma-007/blogging-app-with-Angular-CloudFirestore"
         target="_blank"><i class="fa fa-github" aria-hidden="true" style="font-size:18px"></i> Source Code</a></button>
     <ng-template #anonymousUser>
@@ -19,5 +19,36 @@
       <mat-menu #menu="matMenu">
         <button mat-menu-item (click)=logout()>Logout</button>
       </mat-menu>
-    </ng-container> -->
-  </mat-toolbar>
+    </ng-container> 
+  </mat-toolbar> -->
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Елзи</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+            <a class="nav-link active navlink" aria-current="page" routerLink="/home"><span class="text">Начало</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link navlink" routerLink="/features"><span class="text">Статии</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navlink" routerLink="/features"><span class="text">Контакти</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navlink" routerLink="/features"><span class="text">Продукти</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Друго</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navlink" routerLink="/addpost"><span class="text">Създай Статия</span></a>
+            </li>
+        </ul>
+        </div>
+    </div>
+</nav>

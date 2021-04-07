@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from  '@angular/forms';
 import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 import { BlogEditorComponent } from './components/blog-editor/blog-editor.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BlogEditorComponent } from './components/blog-editor/blog-editor.compon
       { path: '**' , component: HomeComponent }       
     ]),
     FormsModule,
-    CKEditorModule
+    CKEditorModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
