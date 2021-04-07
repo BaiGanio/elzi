@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI/CD
+name: CI/CD B&D
 
 # Controls when the action will run. 
 on:
@@ -8,8 +8,6 @@ on:
   push:
     branches:
     - matser
-  pull_request:
-    branches: [ matser ]
   workflow_dispatch:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
