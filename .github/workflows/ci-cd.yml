@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI/CD B&D
+name: Build & Deploy
 
 # Controls when the action will run. 
 on:
@@ -27,11 +27,11 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-    
-    - name: Build
+    - name: Build the app
       run: |
         npm install
         npm run-script deploy
-    - name: archive build
+    - name: Archive the build & upload the artifacts
       if: success()
       uses: actions/upload-artifact@v1
       with:
