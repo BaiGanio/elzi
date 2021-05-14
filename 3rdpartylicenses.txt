@@ -117,6 +117,10 @@ THE SOFTWARE.
 
 @angular/material/card
 
+@angular/material/divider
+
+@angular/material/progress-spinner
+
 @angular/material/snack-bar
 
 @angular/material/tooltip
