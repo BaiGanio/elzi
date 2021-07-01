@@ -44,7 +44,8 @@ import { ContactComponent } from './components/contact/contact.component';
       { path: '' , component: HomeComponent, pathMatch: 'full' },
       { path: 'addpost', component: BlogEditorComponent },
       { path: 'contact' , component: ContactComponent },
-      { path: 'editpost/:id', component: BlogEditorComponent, canActivate: [AdminAuthGuard] },
+      // { path: 'editpost/:id', component: BlogEditorComponent, canActivate: [AdminAuthGuard] },
+      { path: 'editpost/:id', component: BlogEditorComponent },
       { path: 'blog/:id/:slug', component: BlogComponent },
       { path: '**' , component: HomeComponent }
     ]),

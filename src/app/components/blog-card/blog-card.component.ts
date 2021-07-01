@@ -4,6 +4,7 @@ import { BlogService } from 'src/app/services/blog.service';
 import { Post } from 'src/app/models/post';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { SnackbarService } from 'src/app/services/snackbar.service';
 
 @Component({
   selector: 'app-blog-card',
@@ -15,7 +16,10 @@ export class BlogCardComponent implements OnInit, OnDestroy {
   blogPost: Post[] = [];
   private unsubscribe$ = new Subject<void>();
 
-  constructor(private blogService: BlogService) { }
+  constructor(
+    private blogService: BlogService,
+    private snackBarService: SnackbarService
+    ) { }
 
   ngOnInit() {
     this.getBlogPosts();
@@ -31,7 +35,13 @@ export class BlogCardComponent implements OnInit, OnDestroy {
   }
 
   delete(postId: string) {
-    // Method definition to be added later
+    if (confirm('Сигурни ли сте, че искате да изтриете тази статия?')) {
+      this.blogService.deletePost(postId).then(
+        () => {
+          this.snackBarService.showSnackBar('Статията е изтрита успешно!');
+        }
+      );
+    }
   }
 
   ngOnDestroy() {

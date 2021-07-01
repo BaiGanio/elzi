@@ -40,4 +40,8 @@ export class BlogService {
     return blogDetails;
   }
 
+  deletePost(postId: string) {
+    return this.db.doc('blogs/' + postId).delete();
+  }
+
 }

@@ -39,7 +39,7 @@ export class BlogEditorComponent implements OnInit {
     this.authService.appUser$.subscribe(appUser => this.appUser = appUser);
     this.setEditorConfig();
     if (this.postId) {
-      this.formTitle = 'Edit';
+      this.formTitle = 'Промени';
       this.blogService.getPostbyId(this.postId)
         .pipe(takeUntil(this.unsubscribe$))
         .subscribe(
