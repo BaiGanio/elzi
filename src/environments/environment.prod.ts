@@ -1,5 +1,9 @@
+import { version } from '../../package.json';
+
 export const environment = {
   production: true,
+  name: name,
+  version: version,
   firebaseConfig :{
     apiKey: "AIzaSyCSn8LPJsitpaxwtqLlBFkuo26b9k2gK0s",
     authDomain: "elzi-fb964.firebaseapp.com",
