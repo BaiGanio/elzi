@@ -20,6 +20,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AdminAuthGuard } from './guards/admin-auth.guard';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ContactComponent } from './components/contact/contact.component';
     SlugPipe,
     BlogCardComponent,
     BlogComponent,
-    ContactComponent
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

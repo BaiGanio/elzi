@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
  import { Router } from '@angular/router';
 
@@ -16,6 +15,8 @@ export class AppComponent {
     private router: Router) { }
 
   ngOnInit() {
+
+
     this.authService.appUser$.subscribe(user => {
       if (!user) {
         return;
