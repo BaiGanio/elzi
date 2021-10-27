@@ -21,6 +21,8 @@ import { AdminAuthGuard } from './guards/admin-auth.guard';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ArticlesService } from './services/articles.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -54,8 +56,11 @@ import { FooterComponent } from './components/footer/footer.component';
     FormsModule,
     CKEditorModule,
     FlexLayoutModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ArticlesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

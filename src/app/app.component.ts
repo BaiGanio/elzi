@@ -9,13 +9,13 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
   title = 'elzi-website';
+  articles = new Array<any>();
 
   constructor(
     private authService: AuthService,
     private router: Router) { }
 
   ngOnInit() {
-
 
     this.authService.appUser$.subscribe(user => {
       if (!user) {

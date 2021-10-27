@@ -1,11 +1,11 @@
-export class Post {       
-    postId: string;       
-    title: string;      
-    content: string;       
-    author: string;       
-    createdDate: any;
-    
+export class Post {
+    Id: string;
+    Title: string;
+    Content: string;
+    Author: string;
+    CreatedOn: Date;
+    ImgUrl: string;
+
     constructor() {
-        this.content = '';       
-    }   
+    }
 }
